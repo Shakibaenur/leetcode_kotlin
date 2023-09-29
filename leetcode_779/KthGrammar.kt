@@ -30,17 +30,16 @@ class kthGrammar {
         if (n == 1) {
             return 0
         }
-
         // Calculate the midpoint of the previous row.
         val mid = (1 shl (n - 2))
 
         // If k is less than or equal to mid, it will be the same as the kth symbol
         // in the previous row. Otherwise, it will be the complement of the k-midth symbol
         // in the previous row.
-        if(k<=mid){
-            return kthGrammar(n - 1, k)
+        return if(k<=mid){
+            kthGrammar(n - 1, k)
         }else{
-            return 1 - kthGrammar(n - 1, k - mid)
+            1 - kthGrammar(n - 1, k - mid)
         }
 
     }
