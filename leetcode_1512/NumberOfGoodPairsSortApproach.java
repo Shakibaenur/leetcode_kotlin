@@ -6,6 +6,7 @@ public class NumberOfGoodPairsSortApproach {
 
     //brute force
     //i=0=>j=>i+1
+    //if the time complexity takes 10^8 then the approach will fail
     public int numIdenticalPairs(int[] nums) {
         //find frequency of each  element then add n*(n-1)/2
         //frequency of all element of array
