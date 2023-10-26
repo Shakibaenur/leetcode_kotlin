@@ -10,7 +10,10 @@ public class FindProductOfArrayExceptSelf238 {
         for(int i=1;i<nums.length;i++){
             answer[i]= answer[i-1]* nums[i-1];
         }
-        System.out.println("answer: 13"+answer.toString());
+        for(int i=0;i<nums.length;i++){
+            System.out.println("answer: 13 "+answer[i]);
+        }
+
 
         int suffixProduct=1;
 
@@ -27,7 +30,7 @@ public class FindProductOfArrayExceptSelf238 {
 //    S.C:O(1)
 
     public static void main(String[] args) {
-        int[] nums={1,2,3,4};
+        int[] nums={-1,1,0,-3,3};
         productExceptSelf(nums);
 
     }
