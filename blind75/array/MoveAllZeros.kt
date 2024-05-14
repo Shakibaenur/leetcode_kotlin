@@ -1,7 +1,6 @@
 package blind75.array
 
 class MoveAllZeros {
-    class Solution {
         class Solution {
             fun moveZeroes(nums: IntArray): Unit {
                 var n=nums.size
