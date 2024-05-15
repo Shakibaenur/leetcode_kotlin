@@ -25,4 +25,25 @@ class MaxNumOfKSumPair {
     }
 //T.C: O(n)
 //S.C: O(1)
+
+    //map solution
+    class Solution1 {
+        fun maxOperations(nums: IntArray, k: Int): Int {
+            var map=mutableMapOf<Int,Int>()
+            var count=0
+            for(num in nums){
+                var target=k-num
+                if(map.getOrDefault(target,0)>0){
+                    count++
+                    map[target]=map.getOrDefault(target,0)-1
+                }else{
+                    map[num]=map.getOrDefault(num,0)+1
+                }
+            }
+            return count
+
+        }
+    }
+//T.C: O(n)
+//S.C: O(n)
 }
